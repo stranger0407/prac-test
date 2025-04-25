@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-Mvc</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="heading">Invoices</p>
+    <div class="container">
+      <div class="invoice-deatil">
+        <div class="invoice-data">
+          <div class="invoice-code dimension">
+            <label for="invoice-code-id">InvoiceCode</label>
+            <input
+              type="text"
+              id="invoice-code-id "
+              placeholder="Invoice Code"
+              class="input-invoice"
+            />
+          </div>
+          <div class="invoice-date dimension">
+            <label for="invoice-date-id">InvoiceDate</label>
+            <input type="date" id="invoice-date-id" class="input-invoice" />
+          </div>
+          <div class="due-date dimension">
+            <label for="due-date-id">InvoiceDate</label>
+            <input type="date" id="due-date-id" class="input-invoice" />
+          </div>
+        </div>
+        <div class="customer-name">
+          <label for="customer">Customer</label>
+          <select name="Customer" id="customer" class="dimension input-invoice">
+            <option value="Select">Select Customer</option>
+            <option value="raja1">Raja1</option>
+            <option value="raja2">Raja2</option>
+            <option value="raja3">Raja3</option>
+          </select>
+        </div>
+      </div>
+      <button id="add-btn">+ Add Product</button>
+      <div class="display-invoice">
+        <div class="header">
+          <span class="id">Id</span>
+          <span class="name">Name</span>
+          <span class="description">Description</span>
+          <span class="price">Price</span>
+          <span class="quantity">Quantity</span>
+          <span class="amount">Amount</span>
+        </div>
+        <div class="invoice-list"></div>
+      </div>
+      <div class="bill-amount">
+        <div class="left">
+          <div class="notes">
+            <label for="notes">Notes</label>
+            <textarea name="notes" id="notes" cols="5" rows="8"></textarea>
+          </div>
+          <div class="status-btn">
+            <label for="status">Status</label>
+            <select name="status" id="status">
+              <option value="paid">Paid</option>
+              <option value="due">Due</option>
+            </select>
+          </div>
+        </div>
+        <div class="right">
+          <div class="total-amount">
+            <label>Total Amount</label>
+            <input type="number" />
+          </div>
+          <div class="amount-paid">
+            <label>Total Amount</label>
+            <input type="number" />
+          </div>
+          <div class="balance-due">
+            <label>Total Amount</label>
+            <input type="number" />
+          </div>
+        </div>
+      </div>
+      <button id="btn-create">Create Invoice</button>
+      <form id="form">
+        <p>Select Product</p>
+        <div class="product">
+          <select name="productName" id="product-name">
+            <option value="sugar">Sugar</option>
+            <option value="quantity">Quantity</option>
+            <option value="details">Details</option>
+            <option value="amount">Amount</option>
+            <option value="price">Price</option>
+          </select>
+          <div class="btn-form">
+            <button id="btn-add">Add</button>
+            <button id="btn-close">Close</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="./controller/controller.js"></script>
+    <script src="./model/model.js"></script>
+    <script src="./views/view.js"></script>
+  </body>
+</html>
